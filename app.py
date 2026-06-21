@@ -32,7 +32,8 @@ def init_rag_system():
 try:
     retriever = init_rag_system()
     # Read API Key from environment
-    llm = ChatGroq(model="llama3-8b-8192", temperature=0.1)
+    #  CORRECT (Active model)
+    llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.1)
 except Exception as e:
     st.error(f"Initialization Error: Ensure your API keys and corpus directory are accessible. Details: {e}")
     st.stop()
